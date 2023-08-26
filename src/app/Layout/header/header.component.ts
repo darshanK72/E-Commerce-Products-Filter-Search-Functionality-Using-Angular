@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  query: string = "";
+
+  changeInput(event:any){
+    console.log(event.target.value)
+  }
 }

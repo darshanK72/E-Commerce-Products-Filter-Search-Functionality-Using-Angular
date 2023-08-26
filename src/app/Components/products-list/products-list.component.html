@@ -1,5 +1,8 @@
 <div class="box">
+    <div class="search-for" *ngIf="searchQuery != '' " >
+        <p>Results for : {{searchQuery}} </p>
+    </div>
     <div class="product-list">
-        <app-product></app-product>
+        <app-product *ngFor="let product of products" [product]="product"></app-product>
     </div>
 </div>

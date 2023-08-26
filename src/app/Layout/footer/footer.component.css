@@ -8,3 +8,7 @@ footer{
     align-items: center;
     padding: 1rem;
 }
+
+footer p{
+    margin-bottom: 0;
+}

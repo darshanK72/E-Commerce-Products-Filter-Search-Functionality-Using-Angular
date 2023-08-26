@@ -1,19 +1,65 @@
-<div class="product-card">
+<!-- <div class="product-card">
+    <div class="heart">
+        <i class="fa-solid fa-heart"></i>
+    </div>
     <div class="image">
         <img [src]="product.thumbnail" alt="">
-    </div>
-    <div class="title">
-        <h3>{{product.title}}</h3>
     </div>
     <div class="brand">
         <p>{{product.brand}}</p>
     </div>
-    <div class="description">
-        <p>{{product.description}}</p>
+    <div class="title">
+        <p>{{product.title}} {{product.description}} </p>
+    </div>
+    <div class="rating">
+        {{product.rating}}
+        <i class="fa-solid fa-star fa-2xs"></i>
     </div>
     <div class="details">
         <div class="price">
-            $ {{product.price}}
+           <p> &#8377;{{product.price}}</p>
+        </div>
+        <div class="original-price">
+           <p> &#8377;{{(product.price * (100 + product.discountPercentage)/100).toFixed(2)}}</p>
+        </div>
+        <div class="discount">
+           <p> {{product.discountPercentage}}% off</p>
+        </div>
+    </div>
+    <div class="prime">
+        <p>Free Delivery by <span>Tomarrow</span></p>
+    </div>
+</div> -->
+
+<div class="product-card">
+    <div class="heart">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+    <div class="image">
+        <img [src]="product.thumbnail" alt="">
+    </div>
+    <div class="all">
+        <div class="title">
+            <p>{{product.data.name}}</p>
+        </div>
+        <div class="rating">
+            {{product.data.rating}}
+            <i class="fa-solid fa-star fa-2xs"></i>
+        </div>
+        <div class="details">
+            <!-- <span>Deal of The Day</span> -->
+            <div class="price">
+                <p> &#8377;{{product.data.current_price}}</p>
+            </div>
+            <div class="original-price">
+                <p> &#8377;{{product.data.original_price}}</p>
+            </div>
+            <div class="discount">
+                <p> {{product.data.discount_percent}}% off</p>
+            </div>
+        </div>
+        <div class="prime">
+            <p>Free Delivery by <span>Tomarrow</span></p>
         </div>
     </div>
 </div>

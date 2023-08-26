@@ -1,0 +1,119 @@
+.product-card {
+    height: 100%;
+    position: relative;
+    box-shadow: 0px 4px 5px #e7e4e470;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+
+.image{
+    height: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    height: 300px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.heart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.heart i {
+    font-size: 2rem;
+    color: hsl(0, 0%, 80%);
+}
+
+.all{
+   padding: 0.5rem;
+}
+
+.brand p {
+    color: hsl(0, 0%, 62%);
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.title p {
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 6px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.rating {
+    display: inline-block;
+    background-color: hsl(123, 43%, 39%);
+    color: #ffffff;
+    padding: 2px 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.rating i {
+    margin-left: 2px;
+}
+
+.details {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+.details .price p {
+    font-size: 1.3rem;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.details .original-price p {
+    height: 100%;
+    font-size: 1rem;
+    color: hsl(240, 3%, 55%);
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2px;
+    margin-bottom: 5px;
+}
+
+.details .discount p {
+    color: hsl(123, 43%, 39%);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.prime p {
+    font-size: 0.8rem;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.prime span {
+    display: inline-block;
+    font-weight: 600;
+}
