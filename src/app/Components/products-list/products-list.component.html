@@ -1,8 +1,30 @@
-<div class="box">
-    <div class="search-for" *ngIf="searchQuery != '' " >
-        <p>Results for : {{searchQuery}} </p>
+<header>
+    <div class="nav">
+        <div class="logo">
+            <a href="#"> E-Commerce Shop</a>
+        </div>
+        <div class="search-box">
+            <input type="text" name="query" [(ngModel)]="query" id="search" placeholder="Search"
+                (input)="changeInput($event)">
+            <div class="icon" id="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="icon">
+                <i class="fa-solid fa-cart-shopping"></i><span>Cart</span>
+            </div>
+        </div>
     </div>
-    <div class="product-list">
-        <app-product *ngFor="let product of products" [product]="product"></app-product>
+</header>
+<div class="holder">
+    <app-products-filter (changedEvent)="onCatgChange($event)"></app-products-filter>
+    <div class="box">
+        <div class="search-for" *ngIf="query != '' ">
+            <p>Results for : {{query}} </p>
+        </div>
+        <div class="product-list">
+            <app-product *ngFor="let product of allProducts" [product]="product"></app-product>
+        </div>
     </div>
 </div>
