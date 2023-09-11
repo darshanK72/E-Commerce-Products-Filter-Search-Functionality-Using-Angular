@@ -31,7 +31,7 @@
 
 .accordion-body .catg{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 input[type='radio']{
