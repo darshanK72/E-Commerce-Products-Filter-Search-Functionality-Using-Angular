@@ -35,7 +35,7 @@ export class ProductsListComponent implements OnInit {
     this.productService.getJsonData().subscribe((data) => {
       this.temp = data;
       this.temp.forEach((p: any) => {
-        if(p.name.substring(keyword)){
+        if((p.name.toLowerCase()).includes(keyword)){
           this.allProducts.push(p);
         }
       });
