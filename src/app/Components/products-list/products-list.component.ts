@@ -11,40 +11,22 @@ export class ProductsListComponent implements OnInit {
   constructor(private productService: ProductService) {}
 
   @Input()
-  category!: string;
-
+  category: string = 'all';
+  
   temp: any;
   allProducts: any[] = [];
   newAllPro: any[] = [];
+
+  @Input()
   query: string = '';
 
   ngOnInit(): void {
     this.productService.getJsonData().subscribe((data) => {
       this.temp = data;
-      console.log(this.temp);
       this.temp.forEach((p: any) => {
         this.allProducts.push(p);
       });
     });
-  }
-
-  changeInput(event: any) {
-    let keyword = event.target.value;
-    this.allProducts = [];
-
-    this.productService.getJsonData().subscribe((data) => {
-      this.temp = data;
-      this.temp.forEach((p: any) => {
-        if((p.name.toLowerCase()).includes(keyword)){
-          this.allProducts.push(p);
-        }
-      });
-    });
-
-    console.log(this.allProducts);
-    console.log(keyword);
-
-
   }
 
   onCatgChange(value: string) {

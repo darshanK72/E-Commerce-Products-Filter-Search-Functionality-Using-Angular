@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  query: string = "";
+  query : string = "";
 
-  changeInput(event:any){
-    console.log(event.target.value)
+  @Output()
+  queryEmmiter : EventEmitter<string> = new EventEmitter<string>();
+
+  changeInput(input:HTMLInputElement){
+    this.query = input.value;
+    this.queryEmmiter.emit(this.query);
   }
 }

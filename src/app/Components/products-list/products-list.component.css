@@ -23,79 +23,10 @@
     font-weight: 400;
 }
 
-app-product{
-    width: 25%;
-    /* height: 500px; */
+.product-wrapper{
+    max-width: 25%;
 }
 
 .holder{
     display: flex;
-}
-
-header{
-    width: 100%;
-    background-color:hsl(217, 87%, 55%);
-    color: #ffffff;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.6rem;
-}
-.logo{
-    width: 30%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 2rem;
-}
-
-.logo a{
-    font-size: 1.4rem;
-    font-family: 'Lora', serif;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.search-box{
-    width: 40%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    color: #000000;
-   
-}
-
-#search-icon{
-    color:hsl(217, 87%, 55%);
-}
-
-.search-box input{
-    padding: 1rem;
-    
-   
-}
-
-
-.icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin: 0 1rem;
-}
-.cart{
-    width: 30%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 2rem;
-}
-
-span{
-    margin-left: 0.5rem;
 }

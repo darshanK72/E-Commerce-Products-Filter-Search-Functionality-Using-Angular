@@ -7,4 +7,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class MainComponent {
 
+  query:string = "";
+
+  queryChange(value:any){
+    this.query = value;
+    console.log(this.query);
+  }
 }

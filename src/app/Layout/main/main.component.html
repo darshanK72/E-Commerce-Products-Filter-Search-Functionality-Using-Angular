@@ -1,2 +1,4 @@
-<app-products-list></app-products-list>
+<app-header (queryEmmiter)="queryChange($event)"></app-header>
+<app-products-list [query]="query"></app-products-list>
 <router-outlet></router-outlet>
+<app-footer></app-footer>
