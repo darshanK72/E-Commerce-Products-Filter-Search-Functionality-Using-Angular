@@ -4,8 +4,8 @@
             <a href="#"> E-Commerce Shop</a>
         </div>
         <div class="search-box">
-            <input type="text" id="search" placeholder="Search" #searchInput>
-            <button class="icon" id="search-icon" (click)="changeInput(searchInput)">
+            <input type="text" id="search" placeholder="Search" #searchInput (keydown.enter)="changeInput(searchInput)">
+            <button class="icon" id="search-icon" (click)="changeInput(searchInput)" >
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
