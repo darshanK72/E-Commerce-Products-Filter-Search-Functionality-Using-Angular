@@ -6,7 +6,7 @@
         </div>
         <div class="product-list">
             <div *ngFor="let product of allProducts" class="product-wrapper">
-                <app-product [product]="product" *ngIf="query === '' ||  product.data.name.toLowerCase().includes(query)"></app-product>
+                <app-product [product]="product" *ngIf="query === '' ||  product.data.name.toLowerCase().includes(query)" (click)="pdp(product)"></app-product>
             </div>
         </div>
     </div>

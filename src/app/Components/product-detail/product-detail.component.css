@@ -1,0 +1,276 @@
+.holder {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+}
+
+.left {
+    width: 40%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+    bottom: 0;
+    z-index: 2;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.holder .left .top {
+    height: 100%;
+    display: flex;
+    height: 500px;
+}
+
+.img-col {
+    width: 100px;
+    /* height: 100%; */
+    max-height: 100%;
+    border: 2px solid rgb(238, 236, 236);
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    overflow-y: scroll;
+}
+
+.img-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.img-col::-webkit-scrollbar {
+    /* width: 4px;
+    height: 4px;
+    background-color: rgb(234, 242, 246); */
+    display: none;
+}
+
+.img-col img:hover {
+    border: 2px solid hsl(217, 87%, 55%);
+}
+
+.main-img {
+    width: 100%;
+    border: 2px solid rgb(238, 236, 236);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    margin-left: 0;
+    border-left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-img img {
+    /* height: 100%; */
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+
+.bottom {
+    margin: 0.5rem;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom .cart {
+    width: 49%;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    background-color: hsl(37, 100%, 50%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+.bottom .buy {
+    width: 49%;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    background-color: hsl(20, 97%, 55%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.bottom span {
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.holder .right {
+    width: 60%;
+
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.product-detail-card {
+    margin: 0.5rem;
+}
+
+.product-detail-card .catg {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(144, 144, 144);
+    margin-bottom: 6px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: inline-block;
+    background-color: hsl(123, 43%, 39%);
+    color: #ffffff;
+    padding: 3px 7px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-bottom: 6px;
+}
+
+.rating i {
+    margin-left: 4px;
+}
+
+
+.details {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+.details .price p {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.details .original-price p {
+    height: 100%;
+    font-size: 1.3rem;
+    color: hsl(240, 3%, 55%);
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2px;
+    margin-bottom: 5px;
+}
+
+.details .discount p {
+    color: hsl(123, 43%, 39%);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.offers {
+    margin-bottom: 12px;
+}
+
+.offers span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.offers .offer {
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.offer i {
+    color: hsl(123, 43%, 39%);
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+
+.prime p {
+    font-size: 1rem;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.prime span {
+    display: inline-block;
+    font-weight: 600;
+}
+
+.seller span {
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+
+}
+
+.seller-detail{
+    display: flex;
+    justify-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.seller-name{
+    font-size: 1rem;
+    margin-right: 10px;
+    color: hsl(217, 87%, 55%);
+    font-weight: 600;
+}
+
+.seller-rating{
+    background-color: hsl(217, 87%, 55%);
+    color: #fff;
+    border-radius: 50px;
+    padding:0rem 0.7rem;
+}
+
+
+
+.policy{
+    margin-bottom: 10px ;
+}
+
+.policy ul,li{
+    list-style-type: disc;
+}
+
+.policy p{
+    font-size: 0.9rem;
+}
+
+.highlights span{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.highlights p{
+    font-size: 0.9rem;
+}

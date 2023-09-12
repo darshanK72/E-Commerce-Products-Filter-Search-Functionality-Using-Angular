@@ -1,0 +1,87 @@
+<app-header></app-header>
+<div class="holder">
+    <div class="left">
+        <div class="top">
+            <div class="img-col">
+                <div *ngFor="let link of product.data.thumbnails" (click)="changeImage(link,mainImage)">
+                    <img [src]="link" alt="alternative image">
+                </div>
+            </div>
+            <div class="main-img" #mainImage>
+                <img [src]="product.data.thumbnails[0]" alt="main image">
+            </div>
+        </div>
+        <div class="bottom">
+            <button class="cart">
+                <i class="fa-solid fa-cart-shopping"></i><span>Add To Cart</span>
+            </button>
+            <button class="buy">
+                <i class="fa-solid fa-bolt"></i><span>Buy Now</span>
+            </button>
+        </div>
+    </div>
+    <div class="right">
+        <div class="product-detail-card">
+            <div class="catg">
+                <p>{{product.category | titlecase}}</p>
+            </div>
+            <div class="title">
+                <p>{{product.data.name | titlecase}}</p>
+            </div>
+            <div class="details">
+                <!-- <span>Deal of The Day</span> -->
+                <div class="price">
+                    <p> &#8377;{{product.data.current_price}}</p>
+                </div>
+                <div class="original-price">
+                    <p> &#8377;{{product.data.original_price}}</p>
+                </div>
+                <div class="discount">
+                    <p> {{product.data.discount_percent}}% off</p>
+                </div>
+            </div>
+            <div class="rating">
+                {{product.data.rating}}
+                <i class="fa-solid fa-star fa-2xs"></i>
+            </div>
+            <div class="all">
+                <div class="prime">
+                    <p>Free Delivery by <span>Tomarrow</span></p>
+                </div>
+            </div>
+            <div class="offers">
+                <span>Available Offers</span>
+                <div class="offer" *ngFor="let offer of product.data.offers">
+                    <i class="fa-solid fa-tag"></i> <p>{{offer}}</p>
+                </div>
+            </div>
+            <div class="highlights" *ngIf="haveHighlights">
+                <span>Product Hignlights</span>
+                <ul>
+                    <ng-container *ngFor="let h of product.data.highlights">
+                        <li>
+                            <p>{{h}}</p>
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+            <div class="seller">
+                <span>Available Sellers</span>
+               <div class="seller-detail">
+                <p class="seller-name">{{product.data.seller.seller_name}}</p>
+                <p class="seller-rating">{{product.data.seller.seller_rating}}  <i class="fa-solid fa-star fa-2xs"></i> </p>
+               </div>
+               <div class="policy">
+                    <ul>
+                        <li> 10 Days Return Policy</li>
+                        <li>  GST Envoice Available</li>
+                    </ul>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="also-like">
+
+</div>
+<app-footer></app-footer>

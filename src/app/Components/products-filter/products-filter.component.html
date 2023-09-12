@@ -35,6 +35,10 @@
                         <label for="backpack">Backpack</label>
                     </div>
                     <div class="catg">
+                        <input type="radio" name="category" value="shoes" [(ngModel)]="choiceCategory" id="shoes" (change)="onChangeCategory()">
+                        <label for="shoes">Shoes</label>
+                    </div>
+                    <div class="catg">
                         <input type="radio" name="category" value="others" [(ngModel)]="choiceCategory" id="others" (change)="onChangeCategory()">
                         <label for="others">Others</label>
                     </div>

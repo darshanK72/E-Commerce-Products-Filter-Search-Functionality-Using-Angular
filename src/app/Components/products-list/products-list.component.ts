@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/Services/product.service';
 import * as productData from '../../../assets/product.json';
 
@@ -8,7 +9,7 @@ import * as productData from '../../../assets/product.json';
   styleUrls: ['./products-list.component.css'],
 })
 export class ProductsListComponent implements OnInit {
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService,private router:Router) {}
 
   @Input()
   category: string = 'all';
@@ -50,5 +51,9 @@ export class ProductsListComponent implements OnInit {
         });
       });
     }
+  }
+
+  pdp(product:any){
+    this.router.navigate(['detail',product.id + 1]);
   }
 }

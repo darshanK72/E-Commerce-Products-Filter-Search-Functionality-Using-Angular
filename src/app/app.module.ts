@@ -8,6 +8,7 @@ import { ProductComponent } from './Components/product/product.component';
 import { HeaderComponent } from './Layout/header/header.component';
 import { FooterComponent } from './Layout/footer/footer.component';
 import { MainComponent } from './Layout/main/main.component';
+import { ProductDetailComponent } from './Components/product-detail/product-detail.component';
 import { ProductsFilterComponent } from './Components/products-filter/products-filter.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
@@ -20,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http'
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    ProductsFilterComponent
+    ProductsFilterComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
