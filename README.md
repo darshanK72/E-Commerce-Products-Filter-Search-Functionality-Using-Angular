@@ -1,6 +1,6 @@
 # ECommerseProducts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+This project is a implementaiton of ecommerse products filter and search functionality.
 
 ## Development server
 
